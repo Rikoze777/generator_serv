@@ -22,7 +22,7 @@ def main():
     range_args = args.range
 
     if number is not None:
-        response = requests.get(f"http://127.0.0.1:8000/api/v1/{number}")
+        response = requests.get(f"http://127.0.0.1:8000/api/v1/single/?num={number}")
         print(response.json())
     if array_args is not None:
         nums_str = "&".join(f"nums_array={num}" for num in array_args)
